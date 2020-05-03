@@ -1,13 +1,21 @@
-.button (@bc, @c, @brdr, @ff) {
-    display: flex;
+.imageformat () {
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+  }
+
+.anchorformat () {
+    text-decoration: none;
+    text-align: left;
+}
+
+.imageformat2 (@w, @h) {
+    width: @w;
+    height: @h;
+}
+
+.button (@bc, @c, @b, @br) {
     background-color: @bc;
     color: @c;
-    border: @brdr;
-    font-family: @ff;
-    width: 80%;
-    font-size: 1.6rem;
-    padding: 1rem;
-    border-radius: 1.5rem;
+    border: @b;
+    border-radius: @br;
 }

@@ -95,9 +95,16 @@ html {
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
+@media (max-width: 550px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .navbar a {
   color: darkgray;
   text-decoration: none;
+  text-align: left;
   font-size: 2.5rem;
   padding-top: 0;
   padding-bottom: 0;
@@ -105,8 +112,33 @@ html {
   padding-right: 2rem;
   border-right: 0.1rem solid darkgray;
 }
+@media (max-width: 550px) {
+  .navbar a {
+    flex-direction: column;
+    border-right: none;
+    padding: 1rem 1rem 0.5rem 0.5rem;
+    border: 0.1rem solid darkgray;
+    border-radius: 0.5rem;
+    width: 80vw;
+    margin: 0.5rem;
+    text-align: center;
+  }
+}
+.navbar a:hover {
+  color: black;
+}
+@media (max-width: 550px) {
+  .navbar a:hover {
+    border: 0.1rem solid black;
+  }
+}
 .navbar #contact {
   border-right: none;
+}
+@media (max-width: 550px) {
+  .navbar #contact {
+    border-right: 0.1rem solid darkgray;
+  }
 }
 .title-container {
   width: 100%;
@@ -128,6 +160,9 @@ html {
   margin-top: 0;
   margin-bottom: 0;
 }
+.title-container img:hover {
+  opacity: 0.8;
+}
 .title-container h1 {
   margin-top: 16rem;
   position: relative;
@@ -138,17 +173,18 @@ html {
   vertical-align: center;
   font-weight: bold;
 }
-.title-container button {
+.title-container #contactus {
   position: relative;
   z-index: 1;
-  border: 0.1rem solid gray;
-  border-radius: 0.5rem;
   margin: 4rem;
   font-size: 2rem;
   padding: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background-color: white;
+  color: black;
+  border: 0.1rem solid gray;
+  border-radius: 0.5rem;
 }
 html {
   font-size: 62.5%;
@@ -160,6 +196,18 @@ html {
   width: 80vw;
   margin: 3rem 3rem 10% 10%;
 }
+@media (max-width: 780px) {
+  .artists-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    margin: 3rem 3rem 4% 4%;
+  }
+}
+.artists-container img:hover {
+  opacity: 0.8;
+}
 .artists-container #joseph {
   display: flex;
   justify-content: space-around;
@@ -167,6 +215,12 @@ html {
   width: 38vw;
   height: 40vh;
   border-radius: 1.5rem;
+}
+@media (max-width: 780px) {
+  .artists-container #joseph {
+    width: 80vw;
+    height: 50vh;
+  }
 }
 .artists-container #vincent {
   display: flex;
@@ -176,19 +230,32 @@ html {
   height: 40vh;
   border-radius: 1.5rem;
 }
+@media (max-width: 780px) {
+  .artists-container #vincent {
+    width: 80vw;
+    height: 50vh;
+  }
+}
 .artists-container a {
   display: flex;
   justify-content: space-around;
   color: black;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   font-size: 2.5rem;
   margin: 3%;
 }
 .artists-container .bio {
   display: flex;
   justify-content: space-between;
+  color: black;
   text-align: center;
   width: 38vw;
   font-size: 1.8rem;
+}
+@media (max-width: 780px) {
+  .artists-container .bio {
+    width: 80vw;
+    margin-bottom: 2rem;
+  }
 }

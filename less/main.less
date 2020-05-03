@@ -9,30 +9,45 @@ html {
     width: 80vw;
     margin: 3rem 3rem 10% 10%;
 
+    @media @tablet {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        margin: 3rem 3rem 4% 4%;
+    }
+
+    img:hover {
+        opacity: 0.8;
+    }
+
     #joseph {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 38vw;
-        height: 40vh;
+        .imageformat ();
+        .imageformat2 (38vw, 40vh);
         border-radius: 1.5rem;
+
+        @media @tablet {
+            .imageformat2 (80vw, 50vh);
+        }
     }
 
     #vincent {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 38vw;
-        height: 40vh;
+        .imageformat ();
+        .imageformat2 (38vw, 40vh);
         border-radius: 1.5rem;
+
+        @media @tablet {
+            .imageformat2 (80vw, 50vh);
+        }
     }
 
     a {
         display: flex;
         justify-content: space-around;
-        color: black;
-        text-decoration:none;
-        text-align: center;
+        color: @font-color;
+        .anchorformat ();
         font-size: 2.5rem;
         margin: 3% 
     }
@@ -40,8 +55,14 @@ html {
     .bio {
         display: flex;
         justify-content: space-between;
+        color: @font-color;
         text-align: center;
         width: 38vw;
         font-size: 1.8rem;
+
+        @media @tablet {
+            width: 80vw;
+            margin-bottom: 2rem;
+        }
     }
 }
